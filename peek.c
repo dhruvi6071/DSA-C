@@ -60,9 +60,21 @@ int pop(struct stack *s)
     return a;
 }
 
+int peek(struct stack *s,  int i){
+    int a = (s->top)-i+1;
+    if(a<0){
+        printf("enter valid number");
+    }
+    else{
+         printf("%d \n", s->arr[a]);
+    }
+
+    return s->arr[a];
+}
+
 void print(struct stack *s)
 {
-    for (int i = 0; i <= (s->top); i++)
+    for (int i = s->top; i >= 0; i--)
     {
         printf("%d \n", s->arr[i]);
     }
@@ -81,6 +93,8 @@ int main()
     push(stk, 4);
     print(stk);
 
+    printf("element at index is : ");
+    peek(stk, 2);
     printf("after pop \n");
     pop(stk);
     pop(stk);
