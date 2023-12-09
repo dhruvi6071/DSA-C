@@ -6,7 +6,7 @@ int main() {
      int size = sizeof(array) / sizeof(array[0]);
      int n = size/2;
 
-     for(int i =0; i<n; i++){      // ahi i<size leta aakho array fari repeat thai ne ae j print thase aetle half size  levi.
+     for(int i =0; i<n; i++){      
         int temp = array[i];
         array[i] = array[size - 1-i];
         array[size-1-i] = temp;
